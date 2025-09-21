@@ -1,13 +1,17 @@
-// "use client";
 import Link from "next/link";
-import { blogs } from "./data";
 
 export const metadata = {
   title: "Blogs | Blog Platform",
   description: "Learn more blogs our blogging platform.",
 };
 
-export default function Blogs() {
+export default async function Blogs() {
+  const res = await fetch("http://localhost:3000/api/blogs");
+  if (!res.ok) {
+    throw new Error("Failed to fetch blogs");
+  }
+
+  const blogs = await res.json();
   return (
     <div className="p-10">
       <h1 className="text-3xl font-semibold mb-6">Blogs</h1>
