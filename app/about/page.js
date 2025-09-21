@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "About | Blog Platform",
+  description: "Learn more about our blogging platform.",
+};
 export default function About() {
   return (
     <div className="p-10">

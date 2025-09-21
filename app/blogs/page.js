@@ -1,6 +1,11 @@
-"use client";
+// "use client";
 import Link from "next/link";
 import { blogs } from "./data";
+
+export const metadata = {
+  title: "Blogs | Blog Platform",
+  description: "Learn more blogs our blogging platform.",
+};
 
 export default function Blogs() {
   return (

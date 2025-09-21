@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Contact | Blog Platform",
+  description: "Learn more contact our blogging platform.",
+};
 export default function Contact() {
   return (
     <div className="p-10">
