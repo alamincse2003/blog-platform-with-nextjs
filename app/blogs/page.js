@@ -1,15 +1,6 @@
-const blogs = [
-  {
-    id: 1,
-    title: "Getting Started with Next.js",
-    description: "Learn the basics of Next.js",
-  },
-  {
-    id: 2,
-    title: "Why Tailwind CSS?",
-    description: "Advantages of using Tailwind CSS in projects",
-  },
-];
+"use client";
+import Link from "next/link";
+import { blogs } from "./data";
 
 export default function Blogs() {
   return (
@@ -20,6 +11,12 @@ export default function Blogs() {
           <li key={blog.id} className="p-4 border rounded-lg shadow-sm">
             <h2 className="text-xl font-bold">{blog.title}</h2>
             <p className="text-gray-600">{blog.description}</p>
+            <Link
+              className="text-blue-500 mt-2 inline-block"
+              href={`/blogs/${blog.id}`}
+            >
+              Read More
+            </Link>
           </li>
         ))}
       </ul>
